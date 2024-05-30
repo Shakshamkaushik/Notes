@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:fitsSystemWindows="true"
+        tools:context=".activity.MainActivity">
+
+
+        <LinearLayout
+            android:id="@+id/LinearConstraints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/ivNotes"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="120dp"
+                app:srcCompat="@drawable/yellow_book"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/ivTodoNotes"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="50dp"
+                app:srcCompat="@drawable/tick_white"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="165dp"
+                app:srcCompat="@drawable/setting"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LinearConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

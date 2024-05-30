@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/enterNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:background="#3A3838">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="#3A3838">
+
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/yello"
+                    android:checked="false" />
+
+                <EditText
+                    android:id="@+id/etTodo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:hint="Tap 'Enter' to create subtasks"
+                    android:textColorHint="#73716B"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="55dp"
+                android:paddingBottom="35dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/alaram_bg"
+                    android:layout_marginStart="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:id="@+id/ivAlarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_access_alarm_24"
+                        app:tint="@color/white"
+                        android:layout_marginEnd="5dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/setAlarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set reminder"
+                        android:layout_marginStart="5dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Done"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="35dp"
+                    android:textColor="#73716B"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/setTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <DatePicker
+                    android:id="@+id/datePicker"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:layout_gravity="center"
+                    android:scaleY="0.7"
+                    android:scaleX="0.7"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_marginRight="-30dp" />
+
+                <TimePicker
+                    android:id="@+id/timePicker"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="spinner"
+                    android:layout_gravity="center"
+                    android:scaleY="0.7"
+                    android:scaleX="0.7"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_marginRight="-30dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_gravity="center"
+                android:text="schedule_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
